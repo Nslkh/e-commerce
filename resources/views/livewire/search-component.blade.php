@@ -64,7 +64,7 @@
 					</ul>
 				</div>
 				@else
-					<p style="padding-top: 30px;"> No Product</p>
+					<p style="padding-top: 30px;"> No Products</p>
 				@endif	
 				<div class="wrap-pagination-info">
 					{{$products->links()}}
