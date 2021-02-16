@@ -1,6 +1,4 @@
-<div>
-    {{-- The whole world belongs to you --}}
-</div>
+
 <div>
 	<div class="container" style="padding: 30px 0;">
 		<div class="row">
