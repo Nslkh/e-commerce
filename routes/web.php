@@ -32,36 +32,36 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', HomeComponent::class); 
+Route::get('/', HomeComponent::class);
 
 Route::get('/shop', ShopComponent::class);
 
 Route::get('/cart', CartComponent::class)->name('product.cart');
 
 Route::get('/checkout', CheckoutComponent::class);
+
 Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');
 
-Route::get('/product-category/{category_slug}',CategoryComponent::class)->name('product.category');
+Route::get('/product-category/{category_slug}', CategoryComponent::class)->name('product.category');
 
-Route::get('/search',SearchComponent::class)->name('product.search');
+Route::get('/search', SearchComponent::class)->name('product.search');
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
 // })->name('dashboard');
 
 // For User or Customer
-Route::middleware(['auth:sanctum', 'verified'])->group(function(){
- Route::get('user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
 });
 
 // For Admin
-Route::middleware(['auth:sanctum', 'verified'])->group(function(){
-	Route::get('admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
-	Route::get('/admin/category',AdminCategoryComponent::class)->name('admin.categories');
-	Route::get('/admin/category/add',AdminAddCategoryComponent::class)->name('admin.addcategory');
-	Route::get('/admin/category/edit/{category_slug}',AdminEditCategoryComponent::class)->name('admin.editcategory');
-	Route::get('/admin/products',AdminProductComponent::class)->name('admin.products');
-	Route::get('/admin/product/add',AdminAddProductComponent::class)->name('admin.addproduct');
-	Route::get('/admin/product/edit/{product_slug}',AdminEditProductComponent::class)->name('admin.editproduct');
-
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+    Route::get('/admin/category', AdminCategoryComponent::class)->name('admin.categories');
+    Route::get('/admin/category/add', AdminAddCategoryComponent::class)->name('admin.addcategory');
+    Route::get('/admin/category/edit/{category_slug}', AdminEditCategoryComponent::class)->name('admin.editcategory');
+    Route::get('/admin/products', AdminProductComponent::class)->name('admin.products');
+    Route::get('/admin/product/add', AdminAddProductComponent::class)->name('admin.addproduct');
+    Route::get('/admin/product/edit/{product_slug}', AdminEditProductComponent::class)->name('admin.editproduct');
 });
