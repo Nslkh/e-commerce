@@ -1,8 +1,8 @@
-    <?php
+<?php
 namespace App\Http\Middleware;
+
 use Illuminate\Http\Request;
 use Closure;
-
 
 class AuthAdmin
 {
@@ -15,15 +15,12 @@ class AuthAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(session('utype') === 'ADM')
-        {
+        if (session('utype') === 'ADM') {
             return $next($request);
-        }
-        else
-        {
+        } else {
             session()->flush();
             return redirect()->route('login');
-        } 
+        }
         return $next($request);
     }
 }

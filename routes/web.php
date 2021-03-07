@@ -52,12 +52,12 @@ Route::get('/search', SearchComponent::class)->name('product.search');
 
 // For User or Customer
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
+    Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
 });
 
 // For Admin
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+    Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin/category', AdminCategoryComponent::class)->name('admin.categories');
     Route::get('/admin/category/add', AdminAddCategoryComponent::class)->name('admin.addcategory');
     Route::get('/admin/category/edit/{category_slug}', AdminEditCategoryComponent::class)->name('admin.editcategory');
