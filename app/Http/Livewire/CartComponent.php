@@ -24,13 +24,13 @@ class CartComponent extends Component
 	public function destroy($rowId)
 	{
 		Cart::remove($rowId);
-		session()->flash('success_message','Item has been removed');
+		session()->flash('success_message','Item has been removed'); 
 	}
 
 	public function destroyAll()
 	{
 		Cart::destroy();
-		session()->flash('success_message','Cart cleared');
+		session()->flash('success_message','Cart cleared'); 
 	}
 
     public function render()
