@@ -11,9 +11,9 @@ use App\Models\Category;
 class ShopComponent extends Component
 {
     public $sorting;
-    public $pagesize;
+    public $pagesize; 
 
-    public function mount()
+    public function mount() 
     {
         $this->sorting = "default";
         $this->pagesize = 12;
@@ -28,7 +28,7 @@ class ShopComponent extends Component
     use WithPagination;
     public function render()
     {
-        if ($this->sorting =='date') {
+        if ($this->sorting =='date') { 
             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);
         } elseif ($this->sorting =='price') {
             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);
