@@ -120,7 +120,7 @@
 						</div>
 
 						@livewire('header-search-component')
-
+ 
 						<div class="wrap-icon right-section">
 							<div class="wrap-icon-section wishlist">
 								<a href="#" class="link-direction">
