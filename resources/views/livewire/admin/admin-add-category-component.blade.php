@@ -6,10 +6,10 @@
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-md-6">
-								Add New Category
+								Add New Category 
 							</div>
 							<div class="col-md-6">
-								<a href="{{route('admin.categories')}}" class="btn btn-success pull-right">All Category</a>
+								<a href="{{route('admin.categories')}}" class="btn btn-success pull-right">All Category</a> 
 							</div>
 						</div>
 					</div>
@@ -21,21 +21,21 @@
 							<div class="form-group">
 								<label class="col-md-4 control-model">Category Name</label>
 								<div class="col-md-4">
-									<input type="text" placeholder="Category Name" class="form-control input-md" wire:model="name" wire:keyup="generateslug"/>
+									<input type="text" placeholder="Category Name" class="form-control input-md" wire:model="name"  wire:keyup="generateSlug"/>
 								</div>
 							</div>
 
 								<div class="form-group">
 								<label class="col-md-4 control-model" >Category Slug</label>
 								<div class="col-md-4">
-									<input type="text" placeholder="Category Slug" class="form-control input-md"wire:model="slug"/>
+									<input type="text" placeholder="Category Slug" class="form-control input-md" wire:model="slug"/>
 								</div>
 							</div>
 
 								<div class="form-group">
 								<label class="col-md-4 control-model"></label>
 								<div class="col-md-4">
-									<button type="submit" class="btn btn-primary">Submit</button>
+									<button type="submit" class="btn btn-primary">Submit</button> 
 								</div>
 							</div>
 						</form>
