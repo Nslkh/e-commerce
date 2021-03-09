@@ -15,7 +15,7 @@
 					</div>
 					<div class="panel-body">
 						@if(Session::has('message'))
-							<div class="alert-success" role="alert">{{Session::get('message')}}></div>
+							<div class=" alert alert-success" role="alert">{{Session::get('message')}}></div>
 						@endif
 						<form class="form-horizontal"wire:submit.prevent="updateCategory"> 
 							<div class="form-group">
@@ -28,7 +28,7 @@
 								<div class="form-group">
 								<label class="col-md-4 control-model" >Category Slug</label>
 								<div class="col-md-4">
-									<input type="text" placeholder="Category Slug" class="form-control input-md"wire:model="slug"/>
+									<input type="text" placeholder="Category Slug" class="form-control input-md" wire:model="slug" />
 								</div>
 							</div>
 

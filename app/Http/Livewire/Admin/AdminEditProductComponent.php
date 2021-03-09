@@ -45,7 +45,7 @@ class AdminEditProductComponent extends Component
 		$this->product_id = $product->id;
 	}
 
-	public function generateSlug()
+	public function generateslug()
 	{
 		$this->slug = Str::slug($this->name, '-');
 	}

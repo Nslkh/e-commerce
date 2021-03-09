@@ -21,7 +21,7 @@
 							<div class="form-group">
 								<label class="col-md-4 control-model">Category Name</label>
 								<div class="col-md-4">
-									<input type="text" placeholder="Category Name" class="form-control input-md" wire:model="name"  wire:keyup="generateSlug"/>
+									<input type="text" placeholder="Category Name" class="form-control input-md" wire:model="name"  wire:keyup="generateslug"/>
 								</div>
 							</div>
 

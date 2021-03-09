@@ -22,7 +22,7 @@
 							<div class="form-group">
 								<label class="col-md-4 control-label">Product Name</label>
 								<div class="col-md-4">
-									<input type="text" placeholder="Product Name" class="form-control input-md" wire:model="name" wire:keyup="generateSlug">
+									<input type="text" placeholder="Product Name" class="form-control input-md" wire:model="name" wire:keyup="generateslug">
 								</div>
 							</div>
 

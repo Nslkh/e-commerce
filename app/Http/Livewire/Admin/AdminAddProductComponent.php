@@ -31,7 +31,7 @@ class AdminAddProductComponent extends Component
 		$this->featured = 0;
 	}
 
-	public function generateSlug()
+	public function generateslug()
 	{
 		$this->slug = Str::slug($this->name,'-');
 	}
