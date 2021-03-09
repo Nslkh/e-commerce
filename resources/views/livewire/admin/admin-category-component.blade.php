@@ -1,5 +1,5 @@
 <div>
-	<style>
+	<style> 
 		nav svg{
 			height: 20px;
 		}
@@ -7,7 +7,7 @@
 			display: block !important;
 		}
 	</style>
-	<div class="container" style="padding: 30px 0;">
+	<div class="container" style="padding: 30px 0;"> 
 		<div class="row">
 			<div class="col-md-12">
 				<div class="panel panel-default">
@@ -35,7 +35,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								@foreach($categories as $category)
+								@foreach($categories as $category) 
 								<tr>
 									<td>{{$category->id}}</td>
 									<td>{{$category->name}}</td>
@@ -48,7 +48,7 @@
 								@endforeach
 							</tbody>
 						</table>
-						{{$categories->links()}}
+						{{$categories->links()}} 
 					</div>
 				</div>
 			</div>
