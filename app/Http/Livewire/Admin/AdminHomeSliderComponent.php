@@ -8,6 +8,6 @@ class AdminHomeSliderComponent extends Component
 {
     public function render()
     {
-        return view('livewire.admin.admin-home-slider-component');
+        return view('livewire.admin.admin-home-slider-component')->layout('layouts.base');
     }
 }
