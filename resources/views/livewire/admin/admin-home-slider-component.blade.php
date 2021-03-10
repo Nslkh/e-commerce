@@ -31,14 +31,14 @@
                             <tbody>
                                 @foreach ($sliders as $slider)
                                 <tr>
-                                    <td>{{$sliders->id}}</td>
+                                    <td>{{$slider->id}}</td>
                                     <td><img src="{{asset('assets/images/sliders')}}/{{$slider->image}}" width="120" ></td>
-                                    <td>{{$sliders->title}}</td>
-                                    <td>{{$sliders->subtitle}}</td>
-                                    <td>{{$sliders->price}}</td>
-                                    <td>{{$sliders->link}}</td>
-                                    <td>{{$sliders->status == 1 ? 'Active':'Inactive'}}</td>
-                                    <td>{{$sliders->created_at}}</td>
+                                    <td>{{$slider->title}}</td>
+                                    <td>{{$slider->subtitle}}</td>
+                                    <td>{{$slider->price}}</td>
+                                    <td>{{$slider->link}}</td>
+                                    <td>{{$slider->status == 1 ? 'Active':'Inactive'}}</td>
+                                    <td>{{$slider->created_at}}</td>
                                 </tr>
                                 @endforeach
                             </tbody>

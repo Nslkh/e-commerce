@@ -2,8 +2,8 @@
 
 namespace App\Http\Livewire\Admin;
 
-use Livewire\Component;
 use App\Models\HomeSlider;
+use Livewire\Component;
 
 class AdminHomeSliderComponent extends Component
 {
