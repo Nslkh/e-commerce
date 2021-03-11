@@ -11,10 +11,11 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-lavel" >Chose Categories</label>
                                 <div class="col-md-4">
-                                    <select class="sel_categories form-control" name="categories[]" multiple="multiple"></select>
+                                    <select class="sel_categories form-control" name="categories[]" multiple="multiple">
                                     @foreach ($categories as $category)
                                         <option value="{{$category->id}}">{{$category->name}}</option>
-                                    @endif
+                                    @endforeach
+                                    </select>
                                 </div>
                             </div>
 
@@ -38,3 +39,11 @@
         </div>
    </div>
 </div>
+
+@push('scripts')
+    <script>
+        $(document).ready(function(){
+            $('.sel_categories').select2();
+        });
+    </script>
+@endpush

@@ -17,6 +17,7 @@ use App\Http\Livewire\Admin\AdminEditProductComponent;
 use App\Http\Livewire\Admin\AdminHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminAddHomeSliderComponent ;
 use App\Http\Livewire\Admin\AdminEditHomeSliderComponent ;
+use App\Http\Livewire\Admin\AdminHomeCategoryComponent;
 use App\Http\Livewire\DetailsComponent;
 use Illuminate\Support\Facades\Route;
 
