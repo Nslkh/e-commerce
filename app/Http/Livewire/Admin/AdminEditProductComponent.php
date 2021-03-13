@@ -62,7 +62,7 @@ class AdminEditProductComponent extends Component
             'SKU' => 'required',
             'stock_status' => 'required',
             'quantity' => 'required|numeric',
-            'image' => 'required|mimes:jpeg,png',
+            'newimage' => 'required|mimes:jpeg,png',
             'category_id' => 'required'
         ]);
     }
@@ -79,7 +79,7 @@ class AdminEditProductComponent extends Component
             'SKU' => 'required',
             'stock_status' => 'required',
             'quantity' => 'required|numeric',
-            'image' => 'required|mimes:jpeg,png',
+            'newimage' => 'required|mimes:jpeg,png',
             'category_id' => 'required'
         ]);
         $product = Product::find($this->product_id);
