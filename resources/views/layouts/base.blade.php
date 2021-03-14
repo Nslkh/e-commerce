@@ -91,6 +91,9 @@
 														<a title="Manage Home Category" href="{{route('admin.homecategories')}}">Manage Home Categories</a>
 													</li>
 													<li class="menu-item">
+														<a title="Manage Sale Setting" href="{{route('admin.sale')}}">Manage Sale Setting</a>
+													</li>
+													<li class="menu-item">
 															<a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 														</li>
 													<form id="logout-form" method="post" action="{{route('logout')}}">
