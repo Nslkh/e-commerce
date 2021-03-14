@@ -39,3 +39,16 @@
         </div>
     </div>
 </div>
+
+@push('scripts')
+    <script>
+        $(function(){
+            $('#sale-date').datetimepicker({
+                format : 'Y-MM-DD h:m:s',
+            })
+            .on('dp.change',function(ev){
+
+            });
+        });
+    </script>
+@endpush
