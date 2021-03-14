@@ -11,12 +11,19 @@ use App\Models\Category;
 class ShopComponent extends Component
 {
     public $sorting;
-    public $pagesize; 
+    public $pagesize;
 
-    public function mount() 
+    public $min_price;
+    public $max_price;
+
+
+    public function mount()
     {
         $this->sorting = "default";
         $this->pagesize = 12;
+
+        $this->min_price = 1;
+        $this->max_price = 1000;
     }
     public function store($product_id, $product_name, $product_price)
     {
@@ -28,7 +35,7 @@ class ShopComponent extends Component
     use WithPagination;
     public function render()
     {
-        if ($this->sorting =='date') { 
+        if ($this->sorting =='date') {
             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);
         } elseif ($this->sorting =='price') {
             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);
@@ -38,7 +45,7 @@ class ShopComponent extends Component
             $products = Product::paginate($this->pagesize);
         }
 
-        $categories = Category::all(); 
+        $categories = Category::all();
 
         return view('livewire.shop-component', ['products'=>$products,'categories'=>$categories])->layout('layouts.base');
     }
