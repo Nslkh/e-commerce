@@ -59,9 +59,15 @@
 						.product-wish .fa:hover{
 							color: #ff7007;
 						}
+						.fill-heart{
+							color: #ff7007 !important;
+						}
 					</style>
 				<div class="row">
 					<ul class="product-list grid-products equal-container">
+						@php
+							$witems = Cart::instance('wishlist')->content()->pluck('id');
+						@endphp
 						@foreach ($products as $product)
 							<li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
 								<div class="product product-style-3 equal-elem ">
@@ -76,7 +82,11 @@
 										<a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Add To Cart.
 										</a>
 										<div class="product-wish">
-											<a href="#"><i class="fa fa-heart"></i></a>
+											@if($witems->contains($product->id))
+												<a href="#"><i class="fa fa-heart fill-heart"></i></a>
+											@else
+												<a href="#" wire:click.prevent="addToWishlist( {{$product->id}},'{{$product->name}}',{{$product->regular_price}} )"><i class="fa fa-heart"></i></a>
+											@endif
 										</div>
 									</div>
 								</div>
